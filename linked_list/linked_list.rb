@@ -5,11 +5,10 @@ class LinkedList
   def initialize
     @head = nil
     @length = 0
-    
   end
 
-  def push(data)
-    node = Node.new(data, nil)
+  def push(element)
+    node = Node.new(element, nil)
     if head.nil?
       @head = node
     else
@@ -43,7 +42,7 @@ class LinkedList
     return self
   end
 
-  private 
+  private
   def find_tail
     previous = nil
     current = head
